@@ -1,0 +1,267 @@
+{
+    "compagny": "COUMBASSA & SANDEN GROUP",
+    "seo": {
+        "title_template": "C&S TECH - Solutions Digitales Côte d'Ivoire",
+        "default_description": "Solutions technologiques innovantes et transformation digitale en Côte d'Ivoire. Développement web, applications mobiles, IA pour entreprises africaines.",
+        "keywords": "développement web Côte d'Ivoire, solutions digitales Abidjan, transformation numérique Afrique, intelligence artificielle, applications web, C&S TECH, COUMBASSA SANDEN"
+    },
+    "ids": {
+        "hero": "acceuil",
+        "about": "a-propos",
+        "services": "services",
+        "projects": "nos-projets",
+        "packs": "nos-packs",
+        "contact": "contact",
+        "needs": "vos-besoins"
+    },
+    "header": {
+        "hero": "Accueil",
+        "about": "À propos de nous",
+        "services": "Services",
+        "projects": "Nos projets",
+        "packs": "Nos packs",
+        "contact": "Contact",
+        "needs": "Vos besoins"
+    },
+    "need": {
+        "title": "Vos besoins",
+        "subtitle": "Avez-vous déjà ressenti ces frustrations ?",
+        "items": [
+            {
+                "title": "Trop de papiers à gérer",
+                "alt": "Trop de papiers à gérer",
+                "description": "Gestion inefficiente des documents qui ralentit vos processus métier"
+            },
+            {
+                "title": "Informations perdues",
+                "alt": "Informations perdues",
+                "description": "Informations inaccessibles qui impactent votre productivité"
+            },
+            {
+                "title": "Processus chronophages",
+                "alt": "Processus chronophages",
+                "description": "Processus métiers longs et complexes à optimiser"
+            },
+            {
+                "title": "Clients qui attendent trop longtemps",
+                "alt": "Clients qui attendent trop longtemps",
+                "description": "Expérience client insatisfaisante due aux délais"
+            },
+            {
+                "title": "Données mal classées et non sécurisées",
+                "alt": "Données mal classées et non sécurisées",
+                "description": "Données sensibles non protégées exposant votre entreprise"
+            },
+            {
+                "title": "Communication d'équipe inefficace",
+                "alt": "Communication d'équipe inefficace",
+                "description": "Communication interne difficile et collaboration d'équipe compromise"
+            },
+            {
+                "title": "Échanges clients difficiles à suivre",
+                "alt": "Échanges clients difficiles à suivre",
+                "description": "Suivi client inefficace impactant la relation commerciale"
+            },
+            {
+                "title": "Emails et messages dispersés",
+                "alt": "Emails et messages dispersés",
+                "description": "Communications non centralisées créant de la confusion"
+            }
+        ]
+    },
+    "about": {
+        "section": {
+            "badge": "DÉCOUVREZ-NOUS",
+            "title": "À propos de",
+            "company": "C&S TECH",
+            "side_text_1": "Notre engagement :",
+            "side_text_2": "transformer la technologie en opportunité",
+            "description": "Une équipe jeune et passionnée qui allie valeurs africaines et innovation technologique",
+            "team": {
+                "title": "Nous parlons votre langue",
+                "values": "Nous adaptons les outils à vos besoins",
+                "simplify": "Nous simplifions vos processus",
+                "security": "Nous sécurisons vos informations",
+                "comunication": "Nous unifions votre communication",
+                "center": "Nous mettons l'IA au centre de nos solutions"
+            },
+            "features": {
+                "innovation": {
+                    "title": "Innovation au cœur"
+                },
+                "ai": {
+                    "title": "IA au centre"
+                }
+            },
+            "buttons": {
+                "services": "Découvrir nos services",
+                "contact": "Nous contacter"
+            }
+        }
+    },
+    "constant": {
+        "contact_us": "Contactez-nous",
+        "our_services": "Nos services",
+        "our_projects": "Nos projets",
+        "our_packages": "Nos packs",
+        "our_contact": "Nos contacts",
+        "useful_link": "Liens utiles",
+        "our_socials": "Nos réseaux sociaux",
+        "see_also": "Voir aussi",
+        "all_rights_reserved": "Tous droits réservés",
+        "companies": {
+            "group": "Holding",
+            "finance": "Finance & Comptabilité",
+            "legal": "Conseil juridique et fiscal",
+            "tech": "Solutions digitales et technologies"
+        }
+    },
+    "why_choose_us": {
+        "heading": "POURQUOI NOUS CHOISIR",
+        "title": {
+            "part1": "Des solutions exceptionnelles",
+            "part2": "pour votre entreprise"
+        },
+        "stats": {
+            "projects": "Devis sous 48h",
+            "clients": "MIse en place sous 30 jours",
+            "experience": "Assistance et support dédiés",
+            "support": "Satisfaction garantie"
+        },
+        "cta": {
+            "title": "Prêt à transformer votre entreprise ?",
+            "button": "Nous Contacter"
+        }
+    },
+    "contact": {
+        "title": "Contactez-nous",
+        "subtitle": "Contact",
+        "description": "Notre équipe est à votre disposition pour répondre à toutes vos questions.",
+        "form": {
+            "title": "Envoyez-nous votre message",
+            "description": "Nous vous répondrons dans les plus brefs délais",
+            "company_name": "Nom de l'entreprise",
+            "company_placeholder": "Votre entreprise",
+            "email": "Adresse email",
+            "subject": "Objet",
+            "subject_placeholder": "Sélectionnez un objet",
+            "subject_loading": "Chargement...",
+            "message": "Message",
+            "message_placeholder": "Votre message",
+            "privacy": "Nous respectons votre vie privée et ne partageons jamais vos données",
+            "submit": "Envoyer",
+            "sending": "Envoi en cours...",
+            "success_title": "Merci pour votre message !",
+            "success_description": "Nous vous contacterons très prochainement",
+            "validation": {
+                "company_required": "Le nom de l'entreprise est requis",
+                "email_required": "L'adresse email est requise",
+                "email_invalid": "Veuillez entrer une adresse email valide",
+                "subject_required": "L'objet est requis",
+                "message_required": "Le message est requis"
+            }
+        }
+    },
+    "newsletter": {
+        "form": {
+            "title": "Restez informés de nos actualités",
+            "description": "Recevez en avant-première nos offres exclusives",
+            "placeholder": "Votre adresse email",
+            "subscribe": "S'abonner",
+            "sending": "Envoi en cours...",
+            "privacy": "Nous respectons votre vie privée et ne partageons jamais vos données",
+            "privacy_ask": "Si vous souhaitez supprimer votre adresse email de notre liste de diffusion, veuillez nous contacter.",
+            "success": "Inscription réussie à notre newsletter !",
+            "error": "Une erreur est survenue lors de l'inscription",
+            "validation_error": "Veuillez vérifier les champs du formulaire",
+            "rate_limit_error": "Trop de tentatives, veuillez réessayer plus tard",
+            "server_error": "Erreur serveur, veuillez réessayer plus tard",
+            "network_error": "Erreur réseau, veuillez vérifier votre connexion",
+            "errors": {
+                "email_required": "L'adresse email est requise",
+                "email_invalid": "Veuillez entrer une adresse email valide"
+            }
+        }
+    },
+    "roadmap": {
+        "methodology": "Notre méthodologie",
+        "title": "Chaque jour qui passe sans transformation numérique est un jour perdu",
+        "subtitle": "face à vos concurrents.",
+        "steps": {
+            "brainstorming": {
+                "title": "Gérer vos clients en un seul clic"
+            },
+            "ux_research": {
+                "title": "Retrouver un document en quelques secondes"
+            },
+            "product_design": {
+                "title": "Facturer plus rapidement"
+            },
+            "frontend": {
+                "title": "Communiquer plus efficacement avec votre équipe et vos clients"
+            },
+            "backend": {
+                "title": "Sécuriser vos données"
+            },
+            "testing": {
+                "title": "Prendre de meilleures décisions"
+            }
+        },
+        "cta": {
+            "title": "Prêt à démarrer votre transformation digitale ?",
+            "description": "Nous sommes disponibles pour vous guider à chaque étape du processus.",
+            "button": "Construire votre Roadmap"
+        }
+    },
+    "projects": {
+        "section": {
+            "badge": "Portfolio",
+            "title": "Nos projets",
+            "title_highlight": "innovants",
+            "subtitle": "Découvrez nos solutions technologiques sur mesure"
+        },
+        "states": {
+            "loading": "Chargement",
+            "empty": {
+                "title": "Aucun projet disponible",
+                "description": "Il n'y a pas encore de projets à afficher.",
+                "code": "projects.length === 0"
+            },
+            "error": {
+                "title": "Oops! Une erreur est survenue",
+                "retry": "Réessayer"
+            }
+        }
+    },
+    "our_services": {
+        "badge": "Nos Services",
+        "title": {
+            "main": "Solutions digitales",
+            "highlight": "innovantes pour l'Afrique"
+        },
+        "cta": "Démarrer un Projet"
+    },
+    "services_db": {
+        "loading": {
+            "title": "Initialisation des services techniques...",
+            "code": "chargement"
+        },
+        "error": {
+            "title": "Erreur Système Détectée",
+            "code": "CODE_ERREUR: ECHEC_CONNEXION_API",
+            "retry": "Réessayer la connexion"
+        },
+        "empty": {
+            "title": "Aucun service technique disponible",
+            "description": "Nos services digitaux sont en cours de mise à jour. Veuillez revenir plus tard.",
+            "code": "&lt;services status=\"mise-a-jour\" /&gt;"
+        }
+    },
+    "error": {
+        "page_not_found": "Page introuvable",
+        "error_occurred": "Une erreur est survenue",
+        "404_message": "La page que vous recherchez n'existe pas.",
+        "default_message": "Nous rencontrons actuellement des difficultés techniques.",
+        "back_home": "Retour à l'accueil"
+    }
+}

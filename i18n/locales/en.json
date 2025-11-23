@@ -1,0 +1,267 @@
+{
+    "compagny": "COUMBASSA & SANDEN GROUP",
+    "seo": {
+        "title_template": "C&S TECH - Digital Solutions Ivory Coast",
+        "default_description": "Innovative technology solutions and digital transformation in Ivory Coast. Web development, mobile apps, AI for African businesses.",
+        "keywords": "web development Ivory Coast, digital solutions Abidjan, digital transformation Africa, artificial intelligence, web applications, C&S TECH, COUMBASSA SANDEN"
+    },
+    "ids": {
+        "hero": "home",
+        "about": "about-us",
+        "services": "services",
+        "projects": "our-projects",
+        "packs": "our-packages",
+        "contact": "contact",
+        "needs": "your-needs"
+    },
+    "header": {
+        "hero": "Home",
+        "about": "About us",
+        "services": "Services",
+        "projects": "Our projets",
+        "packs": "Packages",
+        "contact": "Contact",
+        "needs": "Your needs"
+    },
+    "about": {
+        "section": {
+            "badge": "DISCOVER US",
+            "title": "About",
+            "company": "C&S TECH",
+            "side_text_1": "Our commitment:",
+            "side_text_2": "turning technology into opportunity",
+            "description": "A young and passionate team that combines african values and technological innovation",
+            "team": {
+                "title": "We speak your language",
+                "values": "We adapt tools to your needs",
+                "simplify": "We simplify your processes",
+                "security": "We secure your information",
+                "comunication": "We unify your communication",
+                "center": "We put AI at the center of our solutions"
+            },
+            "features": {
+                "innovation": {
+                    "title": "Innovation at heart"
+                },
+                "ai": {
+                    "title": "AI at the center"
+                }
+            },
+            "buttons": {
+                "services": "Discover our services",
+                "contact": "Contact us"
+            }
+        }
+    },
+    "constant": {
+        "contact_us": "Contact us",
+        "our_services": "Our services",
+        "our_projects": "Our projects",
+        "our_packages": "Our packages",
+        "our_contact": "Our contacts",
+        "useful_link": "Useful links",
+        "our_socials": "Our social Networks",
+        "see_also": "See also",
+        "all_rights_reserved": "All rights reserved",
+        "companies": {
+            "group": "Holding",
+            "finance": "Finance & accounting",
+            "legal": "Legal & tax consulting",
+            "tech": "Digital solutions and technologies"
+        }
+    },
+    "why_choose_us": {
+        "heading": "WHY CHOOSE US",
+        "title": {
+            "part1": "Exceptional solutions",
+            "part2": "for your business"
+        },
+        "stats": {
+            "projects": "Quote within 48h",
+            "clients": "Setup within 30 days",
+            "experience": "Dedicated assistance and support",
+            "support": "Satisfaction guaranteed"
+        },
+        "cta": {
+            "title": "Ready to transform your business?",
+            "button": "Contact us"
+        }
+    },
+    "contact": {
+        "title": "Contact us",
+        "subtitle": "Contact",
+        "description": "Our team is at your disposal to answer all your questions.",
+        "form": {
+            "title": "Send us your message",
+            "description": "We will reply to you as soon as possible",
+            "company_name": "Company name",
+            "company_placeholder": "Your company",
+            "email": "Email address",
+            "subject": "Subject",
+            "subject_placeholder": "Select a subject",
+            "subject_loading": "Loading...",
+            "message": "Message",
+            "message_placeholder": "Your message",
+            "privacy": "We respect your privacy and never share your data",
+            "submit": "Send",
+            "sending": "Sending...",
+            "success_title": "Thank you for your message!",
+            "success_description": "We will contact you very soon",
+            "validation": {
+                "company_required": "Company name is required",
+                "email_required": "Email address is required",
+                "email_invalid": "Please enter a valid email address",
+                "subject_required": "Subject is required",
+                "message_required": "Message is required"
+            }
+        }
+    },
+    "newsletter": {
+        "form": {
+            "title": "Stay informed of our news",
+            "description": "Receive our exclusive offers in preview",
+            "placeholder": "Your email address",
+            "subscribe": "Subscribe",
+            "sending": "Sending...",
+            "privacy": "We respect your privacy and never share your data",
+            "privacy_ask": "If you wish to remove your email address from our mailing list, please contact us.",
+            "success": "Successfully subscribed to our newsletter!",
+            "error": "An error occurred while subscribing",
+            "validation_error": "Please check the form fields",
+            "rate_limit_error": "Too many attempts, please try again later",
+            "server_error": "Server error, please try again later",
+            "network_error": "Network error, please check your connection",
+            "errors": {
+                "email_required": "Email address is required",
+                "email_invalid": "Please enter a valid email address"
+            }
+        }
+    },
+    "roadmap": {
+        "methodology": "Our Methodology",
+        "title": "Every day without digital transformation is a lost day",
+        "subtitle": "compared to your competitors.",
+        "steps": {
+            "brainstorming": {
+                "title": "Manage your clients in one click"
+            },
+            "ux_research": {
+                "title": "Find a document in seconds"
+            },
+            "product_design": {
+                "title": "Invoice faster"
+            },
+            "frontend": {
+                "title": "Communicate more efficiently with your team and clients"
+            },
+            "backend": {
+                "title": "Secure your data"
+            },
+            "testing": {
+                "title": "Make better decisions"
+            }
+        },
+        "cta": {
+            "title": "Ready to start your digital transformation?",
+            "description": "We are available to guide you every step of the way.",
+            "button": "Build your Roadmap"
+        }
+    },
+    "projects": {
+        "section": {
+            "badge": "Portfolio",
+            "title": "Our innovative",
+            "title_highlight": "projects",
+            "subtitle": "Discover our customized technological solutions"
+        },
+        "states": {
+            "loading": "Loading",
+            "empty": {
+                "title": "No projects available",
+                "description": "There are no projects to display yet.",
+                "code": "projects.length === 0"
+            },
+            "error": {
+                "title": "Oops! An error occurred",
+                "retry": "Try again"
+            }
+        }
+    },
+    "our_services": {
+        "badge": "Our Services",
+        "title": {
+            "main": "Digital Solutions",
+            "highlight": "Innovative for Africa"
+        },
+        "cta": "Start a project"
+    },
+    "services_db": {
+        "loading": {
+            "title": "Initializing tech services...",
+            "code": "loading"
+        },
+        "error": {
+            "title": "System error detected",
+            "code": "ERROR_CODE: API_CONNECTION_FAILED",
+            "retry": "Retry connection"
+        },
+        "empty": {
+            "title": "No tech services available",
+            "description": "Our digital services are currently being updated. Please check back soon.",
+            "code": "&lt;services status=\"updating\" /&gt;"
+        }
+    },
+    "need": {
+        "title": "Your needs",
+        "subtitle": "Have you ever felt these frustrations?",
+        "items": [
+            {
+                "title": "Too much paperwork",
+                "alt": "Too much paperwork",
+                "description": "Inefficient document management slowing down your business processes"
+            },
+            {
+                "title": "Lost information",
+                "alt": "Lost information",
+                "description": "Inaccessible information impacting your productivity"
+            },
+            {
+                "title": "Time-consuming processes",
+                "alt": "Time-consuming processes",
+                "description": "Long and complex business processes to optimize"
+            },
+            {
+                "title": "Clients waiting too long",
+                "alt": "Clients waiting too long",
+                "description": "Unsatisfactory customer experience due to delays"
+            },
+            {
+                "title": "Poorly organized and unsecured data",
+                "alt": "Poorly organized and unsecured data",
+                "description": "Sensitive data not protected exposing your company"
+            },
+            {
+                "title": "Ineffective team communication",
+                "alt": "Ineffective team communication",
+                "description": "Difficult internal communication and compromised team collaboration"
+            },
+            {
+                "title": "Difficult-to-track client exchanges",
+                "alt": "Difficult-to-track client exchanges",
+                "description": "Ineffective client follow-up impacting business relationships"
+            },
+            {
+                "title": "Scattered emails and messages",
+                "alt": "Scattered emails and messages",
+                "description": "Non-centralized communications creating confusion"
+            }
+        ]
+    },
+    "error": {
+        "page_not_found": "Page not found",
+        "error_occurred": "An error occurred",
+        "404_message": "The page you are looking for does not exist.",
+        "default_message": "We are currently experiencing technical difficulties.",
+        "back_home": "Back to home"
+    }
+}

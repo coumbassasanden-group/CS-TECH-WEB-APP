@@ -1,0 +1,218 @@
+<script setup lang="ts">
+const roadmapSteps = [
+  {
+    icon: 'bi bi-brain',
+    title: 'Brainstorming',
+    description: 'Analyse approfondie de vos besoins',
+    number: '01'
+  },
+  {
+    icon: 'bi bi-search',
+    title: 'UX Research',
+    description: 'Étude utilisateur détaillée',
+    number: '02'
+  },
+  {
+    icon: 'bi bi-box-seam',
+    title: 'Product Designing',
+    description: 'Conception de solutions innovantes',
+    number: '03'
+  },
+  {
+    icon: 'bi bi-code-slash',
+    title: 'Front-End Development',
+    description: 'Interfaces modernes et réactives',
+    number: '04'
+  },
+  {
+    icon: 'bi bi-check-circle',
+    title: 'Usability Testing',
+    description: 'Tests et optimisation continue',
+    number: '05'
+  },
+  {
+    icon: 'bi bi-code-square',
+    title: 'Back-End Development',
+    description: 'Solutions robustes et sécurisées',
+    number: '06'
+  },
+  {
+    icon: 'bi bi-graph-up-arrow',
+    title: 'SEO Optimization',
+    description: 'Visibilité maximale',
+    number: '07'
+  },
+  {
+    icon: 'bi bi-megaphone',
+    title: 'Digital Marketing',
+    description: 'Stratégies de croissance digitale',
+    number: '08'
+  }
+]
+
+const clientStats = {
+  number: '2.3M+',
+  reviews: '5000+ Client reviews'
+}
+</script>
+
+<template>
+  <section class="roadmap-section py-5">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-12" data-aos="fade-up">
+          <div class="section-badge mb-3">What We Do</div>
+          <h2 class="section-title mb-4">
+            Working Roadmap
+          </h2>
+          <p class="section-text mb-4">
+            In today's competitive business, the demand for efficient and<br>
+            cost-effective IT solutions has never been more critical.
+          </p>
+
+          <div class="d-flex align-items-center gap-4 mb-5">
+            <a href="#contact" class="btn btn-primary">
+              Get Started
+            </a>
+            <div class="client-stats d-flex align-items-center gap-3">
+              <div class="avatars">
+                <!-- Vous pouvez ajouter des avatars ici -->
+              </div>
+              <div class="stats">
+                <span class="number">{{ clientStats.number }}</span>
+                <span class="text">{{ clientStats.reviews }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-grid">
+            <div v-for="step in roadmapSteps" 
+                 :key="step.number"
+                 class="roadmap-item"
+                 data-aos="fade-up"
+                 :data-aos-delay="parseInt(step.number) * 100">
+              <div class="step-number">{{ step.number }}</div>
+              <div class="roadmap-icon">
+                <i :class="step.icon"></i>
+              </div>
+              <h5>{{ step.title }}</h5>
+              <p>{{ step.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<style scoped>
+.roadmap-section {
+  background-color: var(--cs-brown-color);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  font-family: var(--cs-family-montserrat);
+}
+
+.section-title {
+  font-size: 3rem;
+  color: white;
+}
+
+.section-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-primary {
+  background: var(--cs-tech-orange-color);
+}
+
+.client-stats .number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.client-stats .text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+  position: relative;
+}
+
+.roadmap-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.step-number {
+  color: var(--cs-tech-orange-color);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.roadmap-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.roadmap-icon i {
+  font-size: 1.5rem;
+  color: var(--cs-tech-orange-color);
+}
+
+.roadmap-item h5 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.roadmap-item p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.roadmap-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+@media (max-width: 1200px) {
+  .roadmap-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .roadmap-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+</style>

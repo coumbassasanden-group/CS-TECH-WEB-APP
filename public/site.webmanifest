@@ -1,0 +1,28 @@
+{
+  "name": "C&S TECH - Solutions Digitales Côte d'Ivoire",
+  "short_name": "C&S TECH",
+  "description": "Solutions technologiques innovantes en Côte d'Ivoire",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FEEFD7",
+  "theme_color": "#F9B233",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "technology", "productivity"],
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "dir": "ltr"
+}
