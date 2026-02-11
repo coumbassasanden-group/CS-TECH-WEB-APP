@@ -238,7 +238,7 @@
                 <div class="cs-footer-bottom-content">
                     <p class="cs-copyright montserrat">
                         © <span id="year"> 2025 </span>
-                        <strong> COUMABASSA & SANDEN GROUP</strong>. 
+                        <strong> COUMBASSA & SANDEN GROUP</strong>. 
                         {{ $t('constant.all_rights_reserved') }}
                     </p>
                 </div>
