@@ -577,38 +577,37 @@ const resetActive = () => {
 
 /* Responsive Design */
 @media (max-width: 992px) {
-  .section-title {
-    font-size: 2.2rem;
-  }
-
-  .stat-icon i {
-    font-size: 2.5rem;
-  }
-
-  .stat-title {
-    font-size: 0.9rem;
-  }
+  .section-title { font-size: 2.2rem; }
+  .stat-icon i { font-size: 2.5rem; }
+  .stat-title { font-size: 0.9rem; }
+  .why-choose-us { padding-top: 4rem; padding-bottom: 4rem; }
+  .cta-box h3 { font-size: 1.8rem; }
+  .subheading[style] { font-size: 28px !important; }
 }
 
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 1.8rem;
-  }
+  .section-title { font-size: 1.8rem; }
+  .cta-box h3 { font-size: 1.6rem; }
+  .cta-box { padding: 2rem 1.25rem; margin-top: 2rem; }
+  .stats-banner { padding: 1.5rem 1rem; margin-top: 2rem; }
+  .reason-card { padding: 1.5rem; }
+  .stat-icon i { font-size: 1.8rem; }
+  .stat-title { font-size: 0.8rem; letter-spacing: 0; }
+  .section-description { font-size: 1rem; }
+  .subheading[style] { font-size: 24px !important; }
+  .why-choose-us::before { width: 180px; height: 180px; }
+  .why-choose-us::after { width: 150px; height: 150px; }
+}
 
-  .cta-box h3 {
-    font-size: 1.8rem;
-  }
-
-  .stats-banner {
-    padding: 2rem 1rem;
-  }
-
-  .reason-card {
-    padding: 1.5rem;
-  }
-
-  .stat-icon i {
-    font-size: 2rem;
-  }
+@media (max-width: 480px) {
+  .why-choose-us { padding-top: 3rem; padding-bottom: 3rem; }
+  .section-title { font-size: 1.5rem; }
+  .cta-box h3 { font-size: 1.4rem; }
+  .cta-box p { font-size: 1rem; }
+  .cta-button { padding: 10px 22px; font-size: 1rem; }
+  .stat-icon i { font-size: 1.6rem; }
+  .stat-title { font-size: 0.75rem; }
+  .subheading[style] { font-size: 20px !important; }
+  .why-choose-us::before, .why-choose-us::after { display: none; }
 }
 </style>

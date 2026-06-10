@@ -268,7 +268,7 @@ onMounted(() => {
                 </div>
             </div>
         </div>
-        <NewsLetters/>
+        <!-- <NewsLetters/> -->
     </section>
 </template>
 
@@ -943,7 +943,7 @@ select.form-input:focus {
     }
 
     .contact-image {
-        min-height: 220px;
+        min-height: 200px;
     }
 
     .contact-form {
@@ -968,9 +968,19 @@ select.form-input:focus {
     }
 }
 
+@media (max-width: 768px) {
+    .contact-section { padding: 2rem 0; }
+    .contact-image { min-height: 170px; }
+    .contact-form { padding: 2rem 1.5rem; }
+    .contact-title { font-size: 1.6rem; }
+    .contact-description { font-size: 0.95rem; }
+    .image-content h3 { font-size: 1.5rem; }
+    .image-content p { font-size: 0.9rem; }
+}
+
 @media (max-width: 576px) {
     .contact-section {
-        padding: 3rem 0rem;
+        padding: 2rem 0;
     }
     
     .contact-card {
@@ -978,24 +988,34 @@ select.form-input:focus {
     }
 
     .contact-form {
-        padding: 2rem 1rem;
+        padding: 1.5rem 1rem;
     }
 
     .contact-title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .form-input {
+        padding: 0.875rem 1rem;
+        font-size: 0.95rem;
+        min-height: 44px;
+    }
+
+    .submit-btn {
+        padding: 0.875rem 1.5rem;
     }
     
     .image-content {
-        padding: 1rem;
+        padding: 0.75rem;
     }
     
     .image-content h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
-    
-    /* Ajuster les animations pour mobile */
-    .tech-element {
-        transform: scale(0.7);
-    }
+}
+
+@media (max-width: 380px) {
+    .contact-title { font-size: 1.2rem; }
+    .badge { font-size: 0.75rem; padding: 0.4rem 1rem; }
 }
 </style>

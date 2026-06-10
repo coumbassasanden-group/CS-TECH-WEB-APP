@@ -15,7 +15,6 @@ onMounted(async () => {
     const response = await get<string[]>('/api/texts/about_us')
     texts.value = response
   } catch (error) {
-    console.error('Erreur lors de la récupération des textes:', error)
     texts.value = locale.value === 'fr' ? [
       "Notre équipe est composée de jeunes talents passionnés par la technologie",
       "Nous plaçons les valeurs africaines d'ubuntu au cœur de nos solutions.",
@@ -52,126 +51,85 @@ onMounted(async () => {
 
       <!-- Contenu principal -->
       <div class="row g-5 align-items-center">
-        <!-- Colonne de gauche: Image et informations -->
-        <div class="col-lg-6" data-aos="fade-right">
-          <div class="about-image-container">
-            <div class="main-image-wrapper">
-              <img src="~/assets/images/team-young-african.webp" alt="Notre équipe" class="main-image">
-            </div>
-
-            <!-- Texte sur l'équipe et les valeurs -->
-            <div class="action-buttons d-flex justify-content-center" data-aos="fade-up" data-aos-delay="500">
-              <NuxtLink :to="`#${$t('ids.services')}`" class="btn btn-primary">
-                {{ $t('about.section.buttons.services') }}
-                <i class="bi bi-arrow-right ms-2"></i>
-              </NuxtLink>
-              <NuxtLink :to="`#${$t('ids.contact')}`" class="btn btn-outline">
-                {{ $t('about.section.buttons.contact') }}
-              </NuxtLink>
-            </div>
+        <!-- Image centrée -->
+        <div class="col-12 d-flex flex-column align-items-center" data-aos="fade-up">
+          <div class="main-image-wrapper mb-4">
+            <img src="~/assets/images/team-young-african.webp" alt="Notre équipe" class="main-image">
           </div>
-        </div>
 
-        <!-- Colonne de droite: Contenu principal -->
-        <div class="col-lg-6" data-aos="fade-left">
-          <div class="about-content">
+          <!-- Titre engagement -->
+          <div class="engagement-header text-center mb-2" data-aos="fade-up" data-aos-delay="200">
             <h2 class="content-title">
               <span class="text-accent">{{ $t('about.section.side_text_1') }}</span>
               {{ $t('about.section.side_text_2') }}
             </h2>
-
-            <!-- <p class="content-description">
-              {{ texts[2] }}
-            </p> -->
-
-            <!-- Caractéristiques principales -->
-            <div class="features-list">
-              <div class="value-item my-" data-aos="fade-up" data-aos-delay="100">
-                <div class="value-icon">
-                  <i class="fa-solid fa-handshake-simple"></i>
-                </div>
-                <div class="value-content">
-                  <h4>{{ $t('about.section.team.title') }}</h4>
-                  <p>{{ texts[0] }}</p>
-                </div>
-              </div>
-
-              <div class="value-item my-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="value-icon">
-                  <i class="fa-regular fa-screwdriver-wrench"></i>
-                </div>
-                <div class="value-content">
-                  <h4>{{ $t('about.section.team.values') }}</h4>
-                  <p>{{ texts[1] }}</p>
-                </div>
-              </div>
-              <div class="value-item my-" data-aos="fade-up" data-aos-delay="100">
-                <div class="value-icon">
-                  <i class="fa-solid fa-lightbulb-on"></i>
-                </div>
-                <div class="value-content">
-                  <h4>{{ $t('about.section.team.simplify') }}</h4>
-                  <p>{{ texts[2] }}</p>
-                </div>
-              </div>
-
-              <div class="value-item my-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="value-icon">
-                  <i class="fa-solid fa-lock-keyhole"></i>
-                </div>
-                <div class="value-content">
-                  <h4>{{ $t('about.section.team.security') }}</h4>
-                  <p>{{ texts[3] }}</p>
-                </div>
-              </div>
-              <div class="value-item my-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="value-icon">
-                  <i class="fa-solid fa-messages"></i>
-                </div>
-                <div class="value-content">
-                  <h4>{{ $t('about.section.team.comunication') }}</h4>
-                  <p>{{ texts[4] }}</p>
-                </div>
-              </div>
-              <div class="value-item my-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="value-icon">
-                  <i class="bi bi-robot"></i>
-                </div>
-                <div class="value-content">
-                  <h4>{{ $t('about.section.team.center') }}</h4>
-                  <p>{{ texts[5] }}</p>
-                </div>
-              </div>
-              <!-- <div class="feature-item my-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="feature-icon" style="background-color: #F9B233">
-                  <i class="bi bi-lightbulb"></i>
-                </div>
-                <div class="feature-content">
-                  <h3>{{ $t('about.section.features.innovation.title') }}</h3>
-                  <p>{{ texts[2] }}</p>
-                </div>
-              </div>
-
-              <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-                <div class="feature-icon" style="background-color: #F9B233">
-                  <i class="bi bi-robot"></i>
-                </div>
-                <div class="feature-content">
-                  <h3>{{ $t('about.section.features.ai.title') }}</h3>
-                  <p>{{ texts[3] }}</p>
-                </div>
-              </div>
-              <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-                <div class="feature-icon" style="background-color: #F9B233">
-                  <i class="bi bi-robot"></i>
-                </div>
-                <div class="feature-content">
-                  <h3>{{ $t('about.section.features.ai.title') }}</h3>
-                  <p>{{ texts[4] }}</p>
-                </div>
-              </div> -->
-            </div>
           </div>
+        </div>
+
+        <!-- 6 Cards en grid 3 colonnes -->
+        <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+          <div class="cards-grid">
+
+            <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="value-icon"><i class="fa-solid fa-handshake-simple"></i></div>
+              <div class="value-content">
+                <h4>{{ $t('about.section.team.title') }}</h4>
+                <p>{{ texts[0] }}</p>
+              </div>
+            </div>
+
+            <div class="value-card" data-aos="fade-up" data-aos-delay="150">
+              <div class="value-icon"><i class="fa-regular fa-screwdriver-wrench"></i></div>
+              <div class="value-content">
+                <h4>{{ $t('about.section.team.values') }}</h4>
+                <p>{{ texts[1] }}</p>
+              </div>
+            </div>
+
+            <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="value-icon"><i class="fa-solid fa-lightbulb-on"></i></div>
+              <div class="value-content">
+                <h4>{{ $t('about.section.team.simplify') }}</h4>
+                <p>{{ texts[2] }}</p>
+              </div>
+            </div>
+
+            <div class="value-card" data-aos="fade-up" data-aos-delay="250">
+              <div class="value-icon"><i class="fa-solid fa-lock-keyhole"></i></div>
+              <div class="value-content">
+                <h4>{{ $t('about.section.team.security') }}</h4>
+                <p>{{ texts[3] }}</p>
+              </div>
+            </div>
+
+            <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="value-icon"><i class="fa-solid fa-messages"></i></div>
+              <div class="value-content">
+                <h4>{{ $t('about.section.team.comunication') }}</h4>
+                <p>{{ texts[4] }}</p>
+              </div>
+            </div>
+
+            <div class="value-card" data-aos="fade-up" data-aos-delay="350">
+              <div class="value-icon"><i class="bi bi-robot"></i></div>
+              <div class="value-content">
+                <h4>{{ $t('about.section.team.center') }}</h4>
+                <p>{{ texts[5] }}</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Boutons -->
+        <div class="col-12 d-flex justify-content-center gap-3 flex-wrap" data-aos="fade-up" data-aos-delay="400">
+          <NuxtLink :to="`#${$t('ids.services')}`" class="btn btn-primary">
+            {{ $t('about.section.buttons.services') }}
+            <i class="bi bi-arrow-right ms-2"></i>
+          </NuxtLink>
+          <NuxtLink :to="`#${$t('ids.contact')}`" class="btn btn-outline">
+            {{ $t('about.section.buttons.contact') }}
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -233,80 +191,58 @@ onMounted(async () => {
   line-height: 1.6;
 }
 
-/* === IMAGE ET INFORMATIONS === */
-.about-image-container {
-  height: 100%;
-}
-
+/* === IMAGE CENTRÉE === */
 .main-image-wrapper {
   position: relative;
-  margin-bottom: 40px;
+  width: 100%;
+  max-width: 700px;
 }
 
 .main-image {
   width: 100%;
-  height: 400px;
+  height: 420px;
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.experience-badge {
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  background: var(--cs-tech-orange-color);
-  color: white;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+/* === TITRE ENGAGEMENT === */
+.engagement-header .content-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--cs-brown-color);
+  line-height: 1.3;
+}
+
+/* === GRID 3 COLONNES === */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* === CARDS === */
+.value-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 30px rgba(249, 178, 51, 0.3);
-  z-index: 2;
-}
-
-.exp-number {
-  font-size: 2rem;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.exp-text {
-  font-size: 0.8rem;
-  font-weight: 500;
-  text-align: center;
-}
-
-/* === VALEURS D'ÉQUIPE === */
-.team-values-section {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.value-item {
-  display: flex;
   align-items: flex-start;
-  gap: 20px;
-  padding: 25px;
+  gap: 16px;
+  padding: 28px 24px;
   background: #fafafa;
-  border-radius: 15px;
+  border-radius: 16px;
   border-left: 4px solid var(--cs-tech-orange-color);
   transition: all 0.3s ease;
 }
 
-.value-item:hover {
+.value-card:hover {
   background: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transform: translateY(-5px);
 }
 
-.value-icon {
-  min-width: 50px;
-  height: 50px;
+.value-card .value-icon {
+  min-width: 52px;
+  height: 52px;
   background: var(--cs-tech-light-orange-color);
   color: var(--cs-tech-orange-color);
   border-radius: 12px;
@@ -316,36 +252,19 @@ onMounted(async () => {
   font-size: 1.5rem;
 }
 
-.value-content h4 {
-  font-size: 1.2rem;
+.value-card .value-content h4 {
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--cs-brown-color);
   margin-bottom: 8px;
 }
 
-.value-content p {
-  font-size: 0.95rem;
-  font-family: var(--cs-family-roboto) !important;
+.value-card .value-content p {
+  font-size: 0.9rem;
   color: #666;
   margin: 0;
   line-height: 1.5;
-}
-
-/* === CONTENU PRINCIPAL === */
-.about-content {
-  padding: 40px;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-  height: 100%;
-}
-
-.content-title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--cs-brown-color);
-  margin-bottom: 20px;
-  line-height: 1.3;
+  font-family: var(--cs-family-roboto) !important;
 }
 
 .text-accent {
@@ -483,95 +402,36 @@ onMounted(async () => {
 
 /* === RESPONSIVE === */
 @media (max-width: 991.98px) {
-  .about-section {
-    padding: 60px 0;
-  }
-
-  .section-title {
-    font-size: 2.2rem;
-  }
-
-  .content-title {
-    font-size: 1.6rem;
-  }
-
-  .experience-badge {
-    right: 20px;
-    top: 20px;
-  }
+  .about-section { padding: 60px 0; }
+  .section-title { font-size: 2.2rem; }
+  .cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .main-image { height: 360px; }
 }
 
 @media (max-width: 767.98px) {
-  .about-section {
-    padding: 50px 0;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .content-title {
-    font-size: 1.4rem;
-  }
-
-  .about-content {
-    padding: 30px;
-  }
-
-  .feature-item,
-  .value-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .action-buttons {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .main-image {
-    height: 300px;
-  }
-
-  .experience-badge {
-    width: 80px;
-    height: 80px;
-    right: 15px;
-    top: 15px;
-  }
-
-  .exp-number {
-    font-size: 1.5rem;
-  }
-
-  .exp-text {
-    font-size: 0.7rem;
-  }
+  .about-section { padding: 50px 0; }
+  .section-title { font-size: 1.9rem; }
+  .main-image { height: 260px; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .value-card { flex-direction: row; align-items: flex-start; }
+  .btn { width: 100%; justify-content: center; }
+  .engagement-header .content-title { font-size: 1.5rem; }
 }
 
 @media (max-width: 575.98px) {
-  .section-header {
-    margin-bottom: 40px;
-  }
+  .section-header { margin-bottom: 36px; }
+  .section-title { font-size: 1.6rem; }
+  .section-description { font-size: 1rem; }
+  .main-image { height: 210px; }
+  .value-card { padding: 20px 16px; gap: 12px; }
+  .value-card .value-icon { min-width: 44px; height: 44px; font-size: 1.2rem; }
+  .value-card .value-content h4 { font-size: 0.95rem; }
+  .value-card .value-content p { font-size: 0.85rem; }
+  .engagement-header .content-title { font-size: 1.3rem; }
+}
 
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .about-content {
-    padding: 25px;
-  }
-
-  .team-values-section {
-    gap: 20px;
-  }
-
-  .value-item {
-    padding: 20px;
-  }
+@media (max-width: 380px) {
+  .section-title { font-size: 1.4rem; }
+  .cards-grid { gap: 14px; }
 }
 </style>

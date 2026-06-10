@@ -15,11 +15,22 @@ interface Project {
     link: string;
 }
 
+const { t } = useI18n()
 const { get } = useApi();
 const projects = ref<Project[]>([]);
 const loading = ref(true);
 const error = ref<string | null>(null);
 const config = useRuntimeConfig();
+
+const getStaticProjects = (): Project[] => [
+    {
+        id: 'museia',
+        title: 'MuseIA',
+        image: '',
+        description: t('projects.museia.description'),
+        link: 'https://museia.africa'
+    }
+]
 
 const fetchProjects = async () => {
     loading.value = true;
@@ -27,9 +38,10 @@ const fetchProjects = async () => {
 
     try {
         const data = await get<Project[]>('/api/projects');
-        projects.value = data;
+        projects.value = [...getStaticProjects(), ...data];
     } catch (err: any) {
-        error.value = err.message || 'Failed to load projects';
+        projects.value = getStaticProjects();
+        error.value = null;
     } finally {
         loading.value = false;
     }
@@ -164,7 +176,16 @@ onMounted(() => {
                                         <div class="project-card">
                                             <div class="card-header">
                                                 <div class="project-icon">
-                                                    <img :src="`${config.public.apiBaseUrl}/storage/${project.image}`" :alt="project.title">
+                                                    <img 
+                                                        v-if="project.id === 'museia'"
+                                                        src="~/assets/images/logo-museia.png" 
+                                                        :alt="project.title"
+                                                    >
+                                                    <img 
+                                                        v-else
+                                                        :src="`${config.public.apiBaseUrl}/storage/${project.image}`" 
+                                                        :alt="project.title"
+                                                    >
                                                 </div>
                                                 <div class="card-dots">
                                                     <span class="dot red"></span>
@@ -867,62 +888,42 @@ onMounted(() => {
     .projects-content {
         padding-left: 30px;
     }
-    
-    .section-title {
-        font-size: 40px;
-    }
+    .section-title { font-size: 40px; }
 }
 
 @media (max-width: 991px) {
-    .tech-showcase {
-        margin-bottom: 60px;
-        height: 400px;
-    }
-    
-    .tech-visual {
-        width: 250px;
-        height: 250px;
-    }
-    
-    .projects-content {
-        padding-left: 0;
-    }
-    
+    .projects-content { padding-left: 0; }
     .slider-navigation {
         position: relative;
         top: 30px;
         right: auto;
         justify-content: center;
     }
+    .section-title { font-size: 34px; }
+    .section-subtitle { font-size: 15px; }
 }
 
 @media (max-width: 767px) {
-    .tech-projects-section {
-        padding: 80px 0;
-    }
-    
-    .section-title {
-        font-size: 32px;
-    }
-    
-    .tech-circle {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-    }
-    
-    .hub-core {
-        width: 60px;
-        height: 60px;
-        font-size: 24px;
-    }
-    
-    .project-actions {
-        flex-direction: column;
-    }
-    
-    .btn-secondary {
-        align-self: flex-start;
-    }
+    .tech-projects-section { padding: 60px 0; }
+    .section-title { font-size: 26px; }
+    .section-subtitle { font-size: 14px; }
+    .project-title { font-size: 20px; }
+    .project-description { font-size: 14px; }
+    .card-content { padding: 20px; }
+    .card-header { padding: 16px 20px; }
+    .project-icon { height: 110px; }
+    .project-actions { flex-direction: row; justify-content: flex-end; }
+    .btn-secondary { align-self: flex-start; }
+    .slider-navigation { top: 20px; }
+    .nav-btn { width: 42px; height: 42px; }
+}
+
+@media (max-width: 480px) {
+    .tech-projects-section { padding: 40px 0; }
+    .section-title { font-size: 22px; }
+    .project-title { font-size: 18px; }
+    .card-content { padding: 16px; }
+    .header-badge { font-size: 12px; padding: 6px 12px; }
+    .project-icon { height: 90px; }
 }
 </style>

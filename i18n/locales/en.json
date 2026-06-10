@@ -174,6 +174,9 @@
             "title_highlight": "projects",
             "subtitle": "Discover our customized technological solutions"
         },
+        "museia": {
+            "description": "MUSEIA bridges African art and the world. From a dashboard, each artist publishes their works and generates a unique QR code to display in the gallery. Visitors scan it, and the artwork tells its story — its history, its creator, its secrets — in audio and multiple languages. No more static labels or fleeting exhibitions. Soon, a marketplace will allow acquiring these creations from anywhere. MUSEIA shines a light on African creative genius, far beyond gallery walls."
+        },
         "states": {
             "loading": "Loading",
             "empty": {
