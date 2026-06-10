@@ -68,11 +68,11 @@ if (import.meta.client) {
                             <NuxtLink :to="`#${$t('ids.hero')}`" @click="closeMobileNav" :class="{ active: activeSection === $t('ids.hero') }">{{
                                 $t('header.hero') }}</NuxtLink>
                         </li>
-                        <li>
+                        <!-- <li>
                             <NuxtLink :to="`#${$t('ids.needs')}`" @click="closeMobileNav"
                                 :class="{ active: activeSection === $t('ids.needs') }">{{ $t('header.needs') }}
                             </NuxtLink>
-                        </li>
+                        </li> -->
                         <li>
                             <NuxtLink :to="`#${$t('ids.about')}`" @click="closeMobileNav"
                                 :class="{ active: activeSection === $t('ids.about') }">{{ $t('header.about') }}
@@ -258,6 +258,30 @@ if (import.meta.client) {
     .language-btn {
         background-color: var(--cs-brown-color);
         color: var(--cs-tech-orange-color);
+    }
+}
+
+@media (max-width: 480px) {
+    .navmenu {
+        max-width: 100%;
+    }
+
+    .language-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+        gap: 0.4rem;
+    }
+
+    .navmenu a {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 360px) {
+    .language-btn {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
     }
 }
 </style>

@@ -12,7 +12,6 @@ onMounted(async () => {
         const response = await get<string[]>('/api/texts/hero')
         texts.value = response
     } catch (error) {
-        console.error('Erreur lors de la récupération des textes:', error)
         texts.value = locale.value === 'fr' ? [
             "Solutions technologiques avancées et IA de nouvelle génération",
             "Développement d'applications intelligentes et innovantes",
@@ -54,7 +53,19 @@ const startTypingEffect = () => {
     let isDeleting = false
 
     const typeWriter = () => {
+        if (!texts.value.length) {
+            setTimeout(typeWriter, 500)
+            return
+        }
+
+        // Sécurise l'index
+        textIndex = textIndex % texts.value.length
         const currentText = texts.value[textIndex]
+
+        if (typeof currentText !== 'string') {
+            setTimeout(typeWriter, 500)
+            return
+        }
 
         if (isDeleting) {
             typingElement.textContent = currentText.substring(0, charIndex - 1)
@@ -67,18 +78,17 @@ const startTypingEffect = () => {
         let typeSpeed = isDeleting ? 30 : 50
 
         if (!isDeleting && charIndex === currentText.length) {
-            typeSpeed = 2000 // Pause à la fin
+            typeSpeed = 2000
             isDeleting = true
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false
             textIndex = (textIndex + 1) % texts.value.length
-            typeSpeed = 500 // Pause avant le prochain texte
+            typeSpeed = 500
         }
 
         setTimeout(typeWriter, typeSpeed)
     }
 
-    // Démarrer l'effet après un délai
     setTimeout(typeWriter, 1500)
 }
 </script>
@@ -510,61 +520,37 @@ const startTypingEffect = () => {
 }
 
 /* Responsive */
+@media (max-width: 992px) {
+    .hero { padding: 70px 0; }
+    .hero-description { font-size: 1rem; height: auto; min-height: 70px; }
+}
+
 @media (max-width: 768px) {
-    .hero {
-        padding: 60px 0;
-    }
-
-    .image-frame img {
-        max-width: 280px;
-    }
-
-    .innovation {
-        font-size: 1rem;
-        letter-spacing: 2px;
-    }
-
-    .ai {
-        font-size: 1.6rem;
-    }
-
-    .brand {
-        font-size: 1.5rem !important;
-    }
-
+    .hero { padding: 60px 0; }
     .hero-description {
-        font-size: 1rem;
-        padding: 18px 20px;
-        margin-bottom: 40px;
-    }
-
-    .btn-tech {
-        padding: 14px 28px;
         font-size: 0.95rem;
+        padding: 16px 18px;
+        margin-bottom: 36px;
+        min-height: 60px;
     }
-
-    .status-indicator {
-        bottom: 20px;
-        left: 20px;
-        font-size: 0.75rem;
-    }
+    .btn-tech { padding: 14px 28px; font-size: 0.95rem; }
 }
 
 @media (max-width: 480px) {
-    .brand {
-        font-size: 1.2rem;
-    }
-
-    .image-frame img {
-        max-width: 250px;
-    }
-
+    .hero { padding: 50px 0; }
     .hero-description {
-        margin: 0 10px 35px 10px;
+        font-size: 0.875rem;
+        padding: 14px 14px;
+        margin: 0 8px 30px 8px;
+        min-height: 54px;
     }
+    .btn-tech { padding: 12px 22px; font-size: 0.9rem; }
+    .bracket { font-size: 1rem; }
+}
 
-    .btn-tech {
-        padding: 12px 24px;
-    }
+@media (max-width: 360px) {
+    .hero { padding: 40px 0; }
+    .hero-description { font-size: 0.8rem; padding: 12px; }
+    .btn-tech { padding: 11px 18px; font-size: 0.85rem; }
 }
 </style>

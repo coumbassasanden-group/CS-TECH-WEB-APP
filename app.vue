@@ -1,13 +1,13 @@
 <!-- app.vue -->
 <script setup lang="ts">
-const { locale, locales } = useI18n()
+const { locale } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
 const config = useRuntimeConfig()
 
 // Template de titre global
 useHead({
-  titleTemplate: (titleChunk) => {
+  titleTemplate: (titleChunk: string | undefined) => {
     const siteName = locale.value === 'fr' 
       ? 'C&S TECH - Solutions Digitales'
       : 'C&S TECH - Digital Solutions'
@@ -74,7 +74,7 @@ useHead({
 })
 
 // Google Tag Manager - UNIQUEMENT en production
-if (process.client && process.env.NODE_ENV === 'production') {
+if (import.meta.client && import.meta.env.PROD) {
   useHead({
     script: [
       {

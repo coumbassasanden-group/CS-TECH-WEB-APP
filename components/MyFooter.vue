@@ -799,4 +799,32 @@
         font-size: 16px;
     }
 }
+
+@media (max-width: 480px) {
+    .cs-companies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cs-footer-title {
+        font-size: 17px;
+    }
+
+    .cs-footer-menu a {
+        font-size: 14px;
+    }
+
+    .cs-copyright {
+        font-size: 13px;
+    }
+
+    .cs-social-link {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .cs-newsletter-title { font-size: 16px; }
+    .cs-newsletter-input { padding: 8px 12px; font-size: 13px; }
+    .cs-companies-title { font-size: 18px; }
+}
 </style>

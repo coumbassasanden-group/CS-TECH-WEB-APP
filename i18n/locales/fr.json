@@ -220,6 +220,9 @@
             "title_highlight": "innovants",
             "subtitle": "Découvrez nos solutions technologiques sur mesure"
         },
+        "museia": {
+            "description": "MUSEIA est le pont entre l'art africain et le monde. Depuis un tableau de bord, chaque artiste publie ses œuvres et génère un QR code unique à coller en galerie. Le visiteur scanne, et l'œuvre se raconte : son histoire, son auteur, ses secrets, en audio et en plusieurs langues. Fini les cartels figés et les expositions éphémères. Demain, une marketplace permettra d'acquérir ces créations où que l'on soit. MUSEIA fait rayonner le génie créatif africain, bien au-delà des murs de la galerie."
+        },
         "states": {
             "loading": "Chargement",
             "empty": {

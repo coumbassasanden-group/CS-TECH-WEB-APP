@@ -82,7 +82,6 @@ defineBreadcrumb([
 <template>
   <div>
     <MyHero />
-    <Needs />
     <AboutUs />
     <OurServices />
     <Projects />

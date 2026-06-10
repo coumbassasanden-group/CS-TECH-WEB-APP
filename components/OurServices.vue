@@ -46,7 +46,7 @@ const { get } = useApi()
       </div>
     </div>
     <ServicesFromDB />
-    <WhatWeDo/>
+    <!-- <WhatWeDo/> -->
     <WhyChooseUs/>
   </section>
 </template>
@@ -214,8 +214,38 @@ const { get } = useApi()
     text-align: center;
   }
 
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .about-img {
+    max-height: 300px;
+    overflow: hidden;
+  }
+
+  .about-img::before,
+  .about-img::after {
+    display: none;
+  }
+
   .service-item {
     margin-bottom: 1rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-badge {
+    padding: 0.6rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
   }
 }
 </style>
